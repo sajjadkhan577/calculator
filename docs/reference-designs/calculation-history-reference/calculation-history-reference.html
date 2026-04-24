@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>LuminaCalc - Calculation History</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "surface-container-lowest": "#060e20",
+                "primary-fixed": "#eaddff",
+                "primary": "#d2bbff",
+                "on-tertiary-fixed-variant": "#7d008c",
+                "tertiary": "#fda9ff",
+                "surface-container": "#171f33",
+                "primary-fixed-dim": "#d2bbff",
+                "on-tertiary-fixed": "#36003d",
+                "secondary-fixed": "#acedff",
+                "on-secondary": "#003640",
+                "on-primary-container": "#ede0ff",
+                "secondary": "#4cd7f6",
+                "on-secondary-container": "#00424e",
+                "on-background": "#dae2fd",
+                "surface-dim": "#0b1326",
+                "outline": "#958da1",
+                "on-error": "#690005",
+                "surface-variant": "#2d3449",
+                "error": "#ffb4ab",
+                "surface-container-low": "#131b2e",
+                "tertiary-container": "#b006c4",
+                "surface-container-high": "#222a3d",
+                "on-secondary-fixed-variant": "#004e5c",
+                "on-primary": "#3f008e",
+                "tertiary-fixed": "#ffd6fb",
+                "surface-tint": "#d2bbff",
+                "inverse-primary": "#732ee4",
+                "on-tertiary": "#580063",
+                "surface-container-highest": "#2d3449",
+                "surface-bright": "#31394d",
+                "tertiary-fixed-dim": "#fda9ff",
+                "primary-container": "#7c3aed",
+                "on-tertiary-container": "#ffdafb",
+                "on-primary-fixed": "#25005a",
+                "outline-variant": "#4a4455",
+                "on-surface": "#dae2fd",
+                "inverse-on-surface": "#283044",
+                "on-secondary-fixed": "#001f26",
+                "error-container": "#93000a",
+                "inverse-surface": "#dae2fd",
+                "secondary-fixed-dim": "#4cd7f6",
+                "on-primary-fixed-variant": "#5a00c6",
+                "on-error-container": "#ffdad6",
+                "background": "#0b1326",
+                "surface": "#0b1326",
+                "secondary-container": "#03b5d3",
+                "on-surface-variant": "#ccc3d8"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+            },
+            "spacing": {
+                "display-margin-bottom": "2.5rem",
+                "grid-gap": "1rem",
+                "container-padding": "2rem",
+                "button-size": "4.5rem"
+            },
+            "fontFamily": {
+                "button-text": ["Inter"],
+                "label-sm": ["Inter"],
+                "display-lg": ["Inter"],
+                "display-md": ["Inter"]
+            },
+            "fontSize": {
+                "button-text": ["20px", {"lineHeight": "1.0", "fontWeight": "500"}],
+                "label-sm": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                "display-md": ["48px", {"lineHeight": "1.2", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #0b1326;
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(124, 58, 237, 0.15) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(217, 70, 239, 0.1) 0px, transparent 50%);
+            min-height: 100vh;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-left: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .glass-card-hover:hover {
+            background: rgba(255, 255, 255, 0.07);
+            box-shadow: 0 0 25px rgba(124, 58, 237, 0.15);
+            transform: translateY(-2px);
+        }
+        .neon-red-glow {
+            box-shadow: 0 0 15px rgba(239, 68, 68, 0.4);
+        }
+        .neon-red-glow:hover {
+            box-shadow: 0 0 25px rgba(239, 68, 68, 0.6);
+        }
+    </style>
+</head>
+<body class="text-on-surface font-inter">
+<!-- TopAppBar -->
+<nav class="bg-slate-950/40 backdrop-blur-xl fixed top-0 w-full z-50 border-b border-white/10 shadow-[0_0_15px_rgba(124,58,237,0.1)]">
+<div class="flex justify-between items-center px-6 h-16 w-full max-w-full">
+<div class="flex items-center gap-4">
+<span class="text-2xl font-black bg-gradient-to-r from-violet-400 to-fuchsia-500 bg-clip-text text-transparent font-inter tracking-tight">LuminaCalc</span>
+</div>
+<div class="flex items-center gap-6">
+<div class="hidden md:flex gap-8">
+<a class="text-slate-400 hover:text-violet-300 hover:bg-white/5 transition-all duration-200 px-3 py-1 rounded-lg" href="#">Standard</a>
+<a class="text-slate-400 hover:text-violet-300 hover:bg-white/5 transition-all duration-200 px-3 py-1 rounded-lg" href="#">Scientific</a>
+<a class="text-violet-400 font-bold" href="#">History</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-slate-400 hover:text-violet-300 transition-all active:scale-95 duration-200" data-icon="settings">settings</button>
+<button class="material-symbols-outlined text-slate-400 hover:text-violet-300 transition-all active:scale-95 duration-200" data-icon="account_circle">account_circle</button>
+</div>
+</div>
+</div>
+</nav>
+<!-- SideNavBar -->
+<aside class="h-screen w-64 fixed left-0 top-0 border-r border-white/10 bg-slate-950/60 backdrop-blur-2xl shadow-2xl flex flex-col py-8 px-4 gap-2 z-40 hidden md:flex">
+<div class="mb-10 px-4">
+<h1 class="font-black text-violet-400 text-xl">LuminaCalc</h1>
+<p class="text-xs text-slate-500 font-label-sm">Premium Engine</p>
+</div>
+<nav class="flex-1 flex flex-col gap-2">
+<a class="flex items-center gap-3 px-4 py-3 text-slate-400 hover:bg-white/5 hover:translate-x-1 transition-transform duration-300 rounded-xl font-inter font-medium text-sm" href="#">
+<span class="material-symbols-outlined" data-icon="calculate">calculate</span>
+                Standard
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-400 hover:bg-white/5 hover:translate-x-1 transition-transform duration-300 rounded-xl font-inter font-medium text-sm" href="#">
+<span class="material-symbols-outlined" data-icon="function">function</span>
+                Scientific
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-400 hover:bg-white/5 hover:translate-x-1 transition-transform duration-300 rounded-xl font-inter font-medium text-sm" href="#">
+<span class="material-symbols-outlined" data-icon="straighten">straighten</span>
+                Converter
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 bg-violet-500/20 text-violet-400 border-r-2 border-violet-500 shadow-[0_0_20px_rgba(124,58,237,0.3)] rounded-xl font-inter font-medium text-sm" href="#">
+<span class="material-symbols-outlined" data-icon="history">history</span>
+                History
+            </a>
+</nav>
+<div class="border-t border-white/5 pt-6 mt-6 flex flex-col gap-2">
+<a class="flex items-center gap-3 px-4 py-3 text-slate-400 hover:bg-white/5 hover:translate-x-1 transition-transform duration-300 rounded-xl font-inter font-medium text-sm" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+                Settings
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-400 hover:bg-white/5 hover:translate-x-1 transition-transform duration-300 rounded-xl font-inter font-medium text-sm" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+                Profile
+            </a>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="md:ml-64 pt-24 pb-12 px-6 md:px-12">
+<div class="max-w-5xl mx-auto">
+<!-- Header Section -->
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6">
+<div>
+<h2 class="font-display-md text-display-md text-primary mb-2">Calculation History</h2>
+<p class="text-on-surface-variant font-label-sm">Review and re-use your premium calculations</p>
+</div>
+<button class="flex items-center gap-2 px-6 py-3 bg-error/10 text-error border border-error/30 rounded-full font-button-text text-button-text neon-red-glow hover:bg-error/20 active:scale-95 transition-all duration-300">
+<span class="material-symbols-outlined text-xl" data-icon="delete_sweep">delete_sweep</span>
+                    Clear All
+                </button>
+</div>
+<!-- History Bento Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+<!-- Entry 1 (Large Featured) -->
+<div class="glass-panel glass-card-hover lg:col-span-2 p-8 rounded-3xl transition-all cursor-pointer group flex flex-col justify-between min-h-[180px]">
+<div class="flex justify-between items-start">
+<div class="flex flex-col gap-1">
+<span class="text-on-surface-variant font-label-sm">Today, 2:45 PM</span>
+<span class="text-2xl text-slate-300 font-display-md tracking-wider opacity-60">((540 * 1.15) / 2) + 85.5</span>
+</div>
+<span class="material-symbols-outlined text-violet-400 opacity-0 group-hover:opacity-100 transition-opacity" data-icon="content_copy">content_copy</span>
+</div>
+<div class="mt-4 flex items-baseline gap-4">
+<span class="text-primary text-5xl font-display-lg font-bold">396.00</span>
+<span class="text-violet-500/50 text-sm font-label-sm uppercase tracking-widest">Result</span>
+</div>
+</div>
+<!-- Entry 2 -->
+<div class="glass-panel glass-card-hover p-6 rounded-3xl transition-all cursor-pointer group">
+<div class="flex justify-between items-start mb-6">
+<span class="text-on-surface-variant font-label-sm">Today, 11:20 AM</span>
+<span class="material-symbols-outlined text-secondary opacity-0 group-hover:opacity-100 transition-opacity" data-icon="refresh">refresh</span>
+</div>
+<div class="space-y-1">
+<p class="text-slate-400 font-medium">√625 * sin(45°)</p>
+<p class="text-secondary text-3xl font-display-md">17.677</p>
+</div>
+</div>
+<!-- Entry 3 -->
+<div class="glass-panel glass-card-hover p-6 rounded-3xl transition-all cursor-pointer group">
+<div class="flex justify-between items-start mb-6">
+<span class="text-on-surface-variant font-label-sm">Yesterday, 9:15 PM</span>
+<span class="material-symbols-outlined text-tertiary opacity-0 group-hover:opacity-100 transition-opacity" data-icon="refresh">refresh</span>
+</div>
+<div class="space-y-1">
+<p class="text-slate-400 font-medium">45,000 * 0.07</p>
+<p class="text-tertiary text-3xl font-display-md">3,150.00</p>
+</div>
+</div>
+<!-- Entry 4 -->
+<div class="glass-panel glass-card-hover p-6 rounded-3xl transition-all cursor-pointer group">
+<div class="flex justify-between items-start mb-6">
+<span class="text-on-surface-variant font-label-sm">Yesterday, 4:30 PM</span>
+<span class="material-symbols-outlined text-primary opacity-0 group-hover:opacity-100 transition-opacity" data-icon="refresh">refresh</span>
+</div>
+<div class="space-y-1">
+<p class="text-slate-400 font-medium">12^3 + (500 / 4)</p>
+<p class="text-primary text-3xl font-display-md">1,853</p>
+</div>
+</div>
+<!-- Entry 5 -->
+<div class="glass-panel glass-card-hover p-6 rounded-3xl transition-all cursor-pointer group">
+<div class="flex justify-between items-start mb-6">
+<span class="text-on-surface-variant font-label-sm">Oct 24, 2023</span>
+<span class="material-symbols-outlined text-on-secondary opacity-0 group-hover:opacity-100 transition-opacity" data-icon="refresh">refresh</span>
+</div>
+<div class="space-y-1">
+<p class="text-slate-400 font-medium">log(100) * π</p>
+<p class="text-secondary text-3xl font-display-md">6.283</p>
+</div>
+</div>
+<!-- Decorative Asset Card -->
+<div class="lg:col-span-2 relative h-48 rounded-3xl overflow-hidden mt-6 border border-white/5">
+<div class="absolute inset-0 bg-gradient-to-r from-violet-900/40 to-fuchsia-900/40 z-10 flex items-center px-12">
+<div class="max-w-md">
+<h3 class="text-white text-2xl font-bold mb-2">Cloud Sync Active</h3>
+<p class="text-white/60 text-sm">Your calculations are synchronized across all LuminaCalc instances for seamless workflow transition.</p>
+</div>
+</div>
+<img alt="Abstract digital background" class="w-full h-full object-cover" data-alt="Futuristic dark data visualization with purple and blue glowing network lines and nodes in a 3D digital space" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCk6ScgeN16brZXuqMFoKRXvjrsiu1OBCNChxoVkubT1bZY28rCM8E6aMcGk824lqVZnHar4wFU4PWdf9tSzEO_6BkRJusM2Qx0tnyDr8hEwflMzQBXu4qKrIASpK_gKBhCxdOjr4Wg9TUPQWqZJ-Nr3aRbndkIZQ6SQMnmsH5EWaCjv3CADOeh45OfahlGswWtuVboHz8httfP9_LxSr-iUCISybI0buizyGvo-Lom30539leF95f-ILLKkrh39lmKc66bMOulfSzC"/>
+</div>
+</div>
+</div>
+</main>
+<!-- Mobile BottomNavBar -->
+<nav class="md:hidden fixed bottom-0 w-full bg-slate-950/60 backdrop-blur-2xl py-4 px-6 flex justify-around items-center border-t border-white/10 z-50">
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined" data-icon="calculate">calculate</span>
+<span class="text-[10px] font-medium">Standard</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined" data-icon="function">function</span>
+<span class="text-[10px] font-medium">Scientific</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-violet-400">
+<span class="material-symbols-outlined" data-icon="history" data-weight="fill" style="font-variation-settings: 'FILL' 1;">history</span>
+<span class="text-[10px] font-medium">History</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="text-[10px] font-medium">Settings</span>
+</button>
+</nav>
+</body></html>

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>LuminaCalc - Profile</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-lowest": "#060e20",
+                        "primary-fixed": "#eaddff",
+                        "primary": "#d2bbff",
+                        "on-tertiary-fixed-variant": "#7d008c",
+                        "tertiary": "#fda9ff",
+                        "surface-container": "#171f33",
+                        "primary-fixed-dim": "#d2bbff",
+                        "on-tertiary-fixed": "#36003d",
+                        "secondary-fixed": "#acedff",
+                        "on-secondary": "#003640",
+                        "on-primary-container": "#ede0ff",
+                        "secondary": "#4cd7f6",
+                        "on-secondary-container": "#00424e",
+                        "on-background": "#dae2fd",
+                        "surface-dim": "#0b1326",
+                        "outline": "#958da1",
+                        "on-error": "#690005",
+                        "surface-variant": "#2d3449",
+                        "error": "#ffb4ab",
+                        "surface-container-low": "#131b2e",
+                        "tertiary-container": "#b006c4",
+                        "surface-container-high": "#222a3d",
+                        "on-secondary-fixed-variant": "#004e5c",
+                        "on-primary": "#3f008e",
+                        "tertiary-fixed": "#ffd6fb",
+                        "surface-tint": "#d2bbff",
+                        "inverse-primary": "#732ee4",
+                        "on-tertiary": "#580063",
+                        "surface-container-highest": "#2d3449",
+                        "surface-bright": "#31394d",
+                        "tertiary-fixed-dim": "#fda9ff",
+                        "primary-container": "#7c3aed",
+                        "on-tertiary-container": "#ffdafb",
+                        "on-primary-fixed": "#25005a",
+                        "outline-variant": "#4a4455",
+                        "on-surface": "#dae2fd",
+                        "inverse-on-surface": "#283044",
+                        "on-secondary-fixed": "#001f26",
+                        "error-container": "#93000a",
+                        "inverse-surface": "#dae2fd",
+                        "secondary-fixed-dim": "#4cd7f6",
+                        "on-primary-fixed-variant": "#5a00c6",
+                        "on-error-container": "#ffdad6",
+                        "background": "#0b1326",
+                        "surface": "#0b1326",
+                        "secondary-container": "#03b5d3",
+                        "on-surface-variant": "#ccc3d8"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "display-margin-bottom": "2.5rem",
+                        "grid-gap": "1rem",
+                        "container-padding": "2rem",
+                        "button-size": "4.5rem"
+                    },
+                    "fontFamily": {
+                        "button-text": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "display-md": ["Inter"],
+                        "inter": ["Inter"]
+                    },
+                    "fontSize": {
+                        "button-text": ["20px", {"lineHeight": "1.0", "fontWeight": "500"}],
+                        "label-sm": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "display-md": ["48px", {"lineHeight": "1.2", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #0b1326;
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(124, 58, 237, 0.15) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(253, 169, 255, 0.1) 0px, transparent 50%);
+        }
+        .glass-panel {
+            background: rgba(23, 31, 51, 0.4);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .neon-glow-violet {
+            box-shadow: 0 0 15px rgba(124, 58, 237, 0.3);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="font-inter text-on-surface antialiased min-h-screen">
+<!-- TopAppBar Navigation -->
+<header class="fixed top-0 w-full z-50 bg-slate-950/40 backdrop-blur-xl border-b border-white/10 flex justify-between items-center px-6 h-16 w-full max-w-full shadow-[0_0_15px_rgba(124,58,237,0.1)]">
+<div class="flex items-center gap-4">
+<span class="text-2xl font-black bg-gradient-to-r from-violet-400 to-fuchsia-500 bg-clip-text text-transparent">LuminaCalc</span>
+</div>
+<div class="flex items-center gap-6">
+<div class="hidden md:flex gap-8 items-center text-slate-400 font-medium text-sm">
+<a class="hover:text-violet-300 transition-all" href="#">Standard</a>
+<a class="hover:text-violet-300 transition-all" href="#">Scientific</a>
+<a class="hover:text-violet-300 transition-all" href="#">Converter</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-slate-400 hover:text-violet-300 hover:bg-white/5 p-2 rounded-full transition-all active:scale-95 duration-200">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</button>
+<button class="text-violet-400 hover:text-violet-300 hover:bg-white/5 p-2 rounded-full transition-all active:scale-95 duration-200">
+<span class="material-symbols-outlined" data-icon="account_circle" style="font-variation-settings: 'FILL' 1;">account_circle</span>
+</button>
+</div>
+</div>
+</header>
+<!-- SideNavBar (Hidden on Mobile) -->
+<aside class="hidden md:flex h-screen w-64 fixed left-0 top-0 border-r border-white/10 bg-slate-950/60 backdrop-blur-2xl flex-col py-8 px-4 gap-2 shadow-2xl z-40">
+<div class="mb-8 px-2">
+<h1 class="font-black text-violet-400 text-xl">LuminaCalc</h1>
+<p class="text-[10px] uppercase tracking-widest text-slate-500 font-bold mt-1">Premium Engine</p>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-400 hover:bg-white/5 hover:translate-x-1 transition-transform duration-300 group" href="#">
+<span class="material-symbols-outlined text-xl" data-icon="calculate">calculate</span>
+<span class="font-medium text-sm">Standard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-400 hover:bg-white/5 hover:translate-x-1 transition-transform duration-300 group" href="#">
+<span class="material-symbols-outlined text-xl" data-icon="function">function</span>
+<span class="font-medium text-sm">Scientific</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-400 hover:bg-white/5 hover:translate-x-1 transition-transform duration-300 group" href="#">
+<span class="material-symbols-outlined text-xl" data-icon="straighten">straighten</span>
+<span class="font-medium text-sm">Converter</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-400 hover:bg-white/5 hover:translate-x-1 transition-transform duration-300 group" href="#">
+<span class="material-symbols-outlined text-xl" data-icon="history">history</span>
+<span class="font-medium text-sm">History</span>
+</a>
+</nav>
+<div class="mt-auto pt-4 border-t border-white/5 space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-400 hover:bg-white/5 hover:translate-x-1 transition-transform duration-300 group" href="#">
+<span class="material-symbols-outlined text-xl" data-icon="settings">settings</span>
+<span class="font-medium text-sm">Settings</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl bg-violet-500/20 text-violet-400 border-r-2 border-violet-500 shadow-[0_0_20px_rgba(124,58,237,0.3)] transition-all" href="#">
+<span class="material-symbols-outlined text-xl" data-icon="person" style="font-variation-settings: 'FILL' 1;">person</span>
+<span class="font-medium text-sm">Profile</span>
+</a>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="pt-24 pb-12 md:pl-72 px-6 min-h-screen">
+<div class="max-w-4xl mx-auto space-y-8">
+<!-- User Profile Card -->
+<section class="glass-panel rounded-3xl overflow-hidden shadow-2xl relative">
+<div class="absolute top-0 left-0 w-full h-32 bg-gradient-to-r from-violet-600/20 to-fuchsia-600/20 blur-3xl -z-10"></div>
+<div class="p-8 md:p-12 flex flex-col md:flex-row items-center gap-8">
+<div class="relative group">
+<div class="w-32 h-32 rounded-full overflow-hidden border-4 border-violet-500/30 neon-glow-violet bg-surface-container-highest">
+<img alt="Profile Avatar" class="w-full h-full object-cover" data-alt="Modern minimalist studio portrait of a stylish person with soft atmospheric lighting and cool blue and purple highlights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkjdH-LmuQVz47DVwYTjnBererOZIQ2mwTKuLAX-_N5f1zUXw1BWDXEyaivQcjS-wR5Er6bsD17bBv2jOeZxDDXVC3kn-rfLTgf8iJKGtxBXSvD84gptIZamxf7rD8y_5cq-0PH3fTRQqreU4nbBBgWp6xVKVrs6MdKbDrgB86MQ1e2KGGilAAWrGl90jnhENmzWirjnN5M0C_ydsP8T78iX4v4JY8-8b4sXw4SETuHrTpl1LgtG_AFjQSpGyJjnuhEg5bjIEPfFaA"/>
+</div>
+<button class="absolute bottom-0 right-0 bg-violet-500 text-on-primary p-2 rounded-full shadow-lg hover:scale-110 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-sm" data-icon="edit">edit</span>
+</button>
+</div>
+<div class="flex-1 text-center md:text-left space-y-2">
+<h2 class="font-display-md text-display-md text-on-surface">Alex Lumina</h2>
+<p class="text-slate-400 font-medium">alex.lumina@premium.ai</p>
+<div class="flex flex-wrap gap-2 mt-4 justify-center md:justify-start">
+<span class="px-3 py-1 bg-violet-500/10 border border-violet-500/20 rounded-full text-xs font-bold text-violet-400 tracking-wider uppercase">Pro Tier</span>
+<span class="px-3 py-1 bg-fuchsia-500/10 border border-fuchsia-500/20 rounded-full text-xs font-bold text-fuchsia-400 tracking-wider uppercase">Beta Tester</span>
+</div>
+</div>
+<div class="flex flex-col gap-3 w-full md:w-auto">
+<button class="w-full md:w-48 py-3 px-6 rounded-xl bg-violet-500 text-on-primary font-button-text text-button-text hover:bg-violet-400 shadow-lg shadow-violet-500/20 transition-all active:scale-95">
+                            Edit Profile
+                        </button>
+<button class="w-full md:w-48 py-3 px-6 rounded-xl border border-white/10 hover:bg-white/5 font-button-text text-button-text text-slate-300 transition-all active:scale-95 flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-xl" data-icon="logout">logout</span>
+                            Sign Out
+                        </button>
+</div>
+</div>
+</section>
+<!-- Statistics Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Total Calculations -->
+<div class="glass-panel p-8 rounded-3xl flex items-center justify-between group hover:border-violet-500/30 transition-all duration-500">
+<div>
+<p class="text-label-sm text-slate-500 uppercase tracking-widest mb-1">Total Calculations</p>
+<h3 class="text-4xl font-black text-on-surface tracking-tight">12,482</h3>
+<p class="text-xs text-violet-400 mt-2 flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="trending_up">trending_up</span>
+                            +12% this month
+                        </p>
+</div>
+<div class="w-16 h-16 rounded-2xl bg-violet-500/10 flex items-center justify-center group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl text-violet-400" data-icon="analytics">analytics</span>
+</div>
+</div>
+<!-- Favorite Mode -->
+<div class="glass-panel p-8 rounded-3xl flex items-center justify-between group hover:border-fuchsia-500/30 transition-all duration-500">
+<div>
+<p class="text-label-sm text-slate-500 uppercase tracking-widest mb-1">Favorite Mode</p>
+<h3 class="text-4xl font-black text-on-surface tracking-tight">Scientific</h3>
+<p class="text-xs text-fuchsia-400 mt-2 flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+                            Top 5% of users
+                        </p>
+</div>
+<div class="w-16 h-16 rounded-2xl bg-fuchsia-500/10 flex items-center justify-center group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl text-fuchsia-400" data-icon="function">function</span>
+</div>
+</div>
+<!-- Recent Activity (Full Width in responsive but here as half) -->
+<div class="glass-panel p-8 rounded-3xl md:col-span-2 hover:border-white/20 transition-all">
+<div class="flex justify-between items-end mb-6">
+<h4 class="text-xl font-bold text-on-surface">Usage Activity</h4>
+<span class="text-label-sm text-slate-500">Last 7 Days</span>
+</div>
+<div class="flex items-end gap-2 h-32">
+<div class="flex-1 bg-violet-500/20 rounded-t-lg h-[40%] hover:bg-violet-500/40 transition-all"></div>
+<div class="flex-1 bg-violet-500/20 rounded-t-lg h-[65%] hover:bg-violet-500/40 transition-all"></div>
+<div class="flex-1 bg-violet-500/20 rounded-t-lg h-[90%] hover:bg-violet-500/40 transition-all border-t-2 border-violet-400"></div>
+<div class="flex-1 bg-violet-500/20 rounded-t-lg h-[50%] hover:bg-violet-500/40 transition-all"></div>
+<div class="flex-1 bg-violet-500/20 rounded-t-lg h-[75%] hover:bg-violet-500/40 transition-all"></div>
+<div class="flex-1 bg-violet-500/20 rounded-t-lg h-[85%] hover:bg-violet-500/40 transition-all"></div>
+<div class="flex-1 bg-violet-500 rounded-t-lg h-[100%] neon-glow-violet"></div>
+</div>
+<div class="flex justify-between mt-3 text-[10px] text-slate-600 font-bold uppercase tracking-wider">
+<span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span>
+</div>
+</div>
+</div>
+<!-- Settings Links -->
+<section class="space-y-4">
+<h4 class="text-label-sm text-slate-500 uppercase tracking-widest px-4">Account Preferences</h4>
+<div class="glass-panel rounded-2xl overflow-hidden divide-y divide-white/5">
+<button class="w-full flex items-center justify-between p-5 hover:bg-white/5 transition-all active:scale-[0.99]">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-slate-400" data-icon="notifications">notifications</span>
+<span class="font-medium">Notification Settings</span>
+</div>
+<span class="material-symbols-outlined text-slate-600" data-icon="chevron_right">chevron_right</span>
+</button>
+<button class="w-full flex items-center justify-between p-5 hover:bg-white/5 transition-all active:scale-[0.99]">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-slate-400" data-icon="shield">shield</span>
+<span class="font-medium">Privacy &amp; Security</span>
+</div>
+<span class="material-symbols-outlined text-slate-600" data-icon="chevron_right">chevron_right</span>
+</button>
+<button class="w-full flex items-center justify-between p-5 hover:bg-white/5 transition-all active:scale-[0.99]">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-slate-400" data-icon="cloud_sync">cloud_sync</span>
+<span class="font-medium">Cloud Synchronization</span>
+</div>
+<span class="text-xs text-violet-400 font-bold bg-violet-400/10 px-2 py-0.5 rounded">Enabled</span>
+</button>
+</div>
+</section>
+</div>
+</main>
+<!-- Bottom Navigation (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full bg-slate-950/80 backdrop-blur-2xl border-t border-white/5 flex justify-around items-center h-16 z-50">
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined" data-icon="calculate">calculate</span>
+<span class="text-[10px]">Calc</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined" data-icon="history">history</span>
+<span class="text-[10px]">History</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-violet-400" href="#">
+<span class="material-symbols-outlined" data-icon="person" style="font-variation-settings: 'FILL' 1;">person</span>
+<span class="text-[10px]">Profile</span>
+</a>
+</nav>
+</body></html>

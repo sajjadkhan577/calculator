@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LuminaCalc User Profile</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/luminacalc-styles.css" />
+  </head>
+  <body data-page="profile">
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand-block">
+          <p class="eyebrow">Identity Workspace</p>
+          <h1>LuminaCalc</h1>
+          <p class="sidebar-copy">Manage personal details, see live usage totals, and export or reset your local suite data.</p>
+        </div>
+        <nav class="sidebar-nav">
+          <a class="nav-link" href="standard-calculator.html">Standard Calculator</a>
+          <a class="nav-link" href="scientific-calculator.html">Scientific Calculator</a>
+          <a class="nav-link" href="unit-converter.html">Unit Converter</a>
+          <a class="nav-link" href="calculation-history.html">Calculation History</a>
+          <a class="nav-link" href="application-settings.html">Application Settings</a>
+          <a class="nav-link active" href="user-profile.html">User Profile</a>
+        </nav>
+      </aside>
+
+      <main class="main-panel">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">Account Center</p>
+            <h2>User Profile</h2>
+          </div>
+          <button class="button primary" type="button" data-profile-save>Save Changes</button>
+        </header>
+
+        <section class="profile-layout">
+          <article class="profile-card">
+            <div class="avatar-badge" data-profile-initials>AL</div>
+            <div>
+              <p class="eyebrow">Active Member</p>
+              <h3 data-profile-name>Alex Lumina</h3>
+              <p class="muted-copy" data-profile-role>Product Designer</p>
+            </div>
+          </article>
+
+          <section class="summary-grid">
+            <article class="summary-card">
+              <span class="eyebrow">Total Saved</span>
+              <strong data-total-activities>0</strong>
+            </article>
+            <article class="summary-card">
+              <span class="eyebrow">Scientific Runs</span>
+              <strong data-scientific-total>0</strong>
+            </article>
+            <article class="summary-card">
+              <span class="eyebrow">Conversions</span>
+              <strong data-total-conversions>0</strong>
+            </article>
+          </section>
+
+          <form class="profile-form" data-profile-form>
+            <label>
+              <span>Full Name</span>
+              <input class="text-input" type="text" name="name" />
+            </label>
+            <label>
+              <span>Email</span>
+              <input class="text-input" type="email" name="email" />
+            </label>
+            <label>
+              <span>Role</span>
+              <input class="text-input" type="text" name="role" />
+            </label>
+            <label class="full-width">
+              <span>Bio</span>
+              <textarea class="text-input textarea" name="bio" rows="4"></textarea>
+            </label>
+          </form>
+
+          <article class="settings-card">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">Workspace Controls</p>
+                <h3>Data Actions</h3>
+              </div>
+            </div>
+            <div class="button-row">
+              <button class="button ghost" type="button" data-export-data>Export Data</button>
+              <button class="button danger" type="button" data-reset-app>Reset App Data</button>
+            </div>
+          </article>
+        </section>
+      </main>
+    </div>
+
+    <nav class="mobile-nav">
+      <a class="nav-link" href="standard-calculator.html">Standard</a>
+      <a class="nav-link" href="scientific-calculator.html">Scientific</a>
+      <a class="nav-link" href="unit-converter.html">Converter</a>
+      <a class="nav-link active" href="user-profile.html">Profile</a>
+    </nav>
+
+    <script src="assets/js/luminacalc-app.js"></script>
+  </body>
+</html>

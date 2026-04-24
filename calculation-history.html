@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LuminaCalc Calculation History</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/luminacalc-styles.css" />
+  </head>
+  <body data-page="history">
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand-block">
+          <p class="eyebrow">Audit Workspace</p>
+          <h1>LuminaCalc</h1>
+          <p class="sidebar-copy">Review standard calculations, scientific evaluations, and conversions in one searchable stream.</p>
+        </div>
+        <nav class="sidebar-nav">
+          <a class="nav-link" href="standard-calculator.html">Standard Calculator</a>
+          <a class="nav-link" href="scientific-calculator.html">Scientific Calculator</a>
+          <a class="nav-link" href="unit-converter.html">Unit Converter</a>
+          <a class="nav-link active" href="calculation-history.html">Calculation History</a>
+          <a class="nav-link" href="application-settings.html">Application Settings</a>
+          <a class="nav-link" href="user-profile.html">User Profile</a>
+        </nav>
+      </aside>
+
+      <main class="main-panel">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">Saved Timeline</p>
+            <h2>Calculation History</h2>
+          </div>
+          <button class="button danger" type="button" data-history-clear>Clear All</button>
+        </header>
+
+        <section class="summary-grid">
+          <article class="summary-card">
+            <span class="eyebrow">All Activities</span>
+            <strong data-total-activities>0</strong>
+          </article>
+          <article class="summary-card">
+            <span class="eyebrow">Calculations</span>
+            <strong data-total-calculations>0</strong>
+          </article>
+          <article class="summary-card">
+            <span class="eyebrow">Conversions</span>
+            <strong data-total-conversions>0</strong>
+          </article>
+        </section>
+
+        <section class="filter-bar">
+          <button class="toggle-button active" type="button" data-history-filter="all">All</button>
+          <button class="toggle-button" type="button" data-history-filter="calculation">Calculations</button>
+          <button class="toggle-button" type="button" data-history-filter="conversion">Conversions</button>
+        </section>
+
+        <section class="history-list-panel" data-history-list></section>
+      </main>
+    </div>
+
+    <nav class="mobile-nav">
+      <a class="nav-link" href="standard-calculator.html">Standard</a>
+      <a class="nav-link" href="scientific-calculator.html">Scientific</a>
+      <a class="nav-link" href="unit-converter.html">Converter</a>
+      <a class="nav-link active" href="calculation-history.html">History</a>
+    </nav>
+
+    <script src="assets/js/luminacalc-app.js"></script>
+  </body>
+</html>

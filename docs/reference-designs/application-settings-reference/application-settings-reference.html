@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>LuminaCalc - Settings</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-lowest": "#060e20",
+                        "primary-fixed": "#eaddff",
+                        "primary": "#d2bbff",
+                        "on-tertiary-fixed-variant": "#7d008c",
+                        "tertiary": "#fda9ff",
+                        "surface-container": "#171f33",
+                        "primary-fixed-dim": "#d2bbff",
+                        "on-tertiary-fixed": "#36003d",
+                        "secondary-fixed": "#acedff",
+                        "on-secondary": "#003640",
+                        "on-primary-container": "#ede0ff",
+                        "secondary": "#4cd7f6",
+                        "on-secondary-container": "#00424e",
+                        "on-background": "#dae2fd",
+                        "surface-dim": "#0b1326",
+                        "outline": "#958da1",
+                        "on-error": "#690005",
+                        "surface-variant": "#2d3449",
+                        "error": "#ffb4ab",
+                        "surface-container-low": "#131b2e",
+                        "tertiary-container": "#b006c4",
+                        "surface-container-high": "#222a3d",
+                        "on-secondary-fixed-variant": "#004e5c",
+                        "on-primary": "#3f008e",
+                        "tertiary-fixed": "#ffd6fb",
+                        "surface-tint": "#d2bbff",
+                        "inverse-primary": "#732ee4",
+                        "on-tertiary": "#580063",
+                        "surface-container-highest": "#2d3449",
+                        "surface-bright": "#31394d",
+                        "tertiary-fixed-dim": "#fda9ff",
+                        "primary-container": "#7c3aed",
+                        "on-tertiary-container": "#ffdafb",
+                        "on-primary-fixed": "#25005a",
+                        "outline-variant": "#4a4455",
+                        "on-surface": "#dae2fd",
+                        "inverse-on-surface": "#283044",
+                        "on-secondary-fixed": "#001f26",
+                        "error-container": "#93000a",
+                        "inverse-surface": "#dae2fd",
+                        "secondary-fixed-dim": "#4cd7f6",
+                        "on-primary-fixed-variant": "#5a00c6",
+                        "on-error-container": "#ffdad6",
+                        "background": "#0b1326",
+                        "surface": "#0b1326",
+                        "secondary-container": "#03b5d3",
+                        "on-surface-variant": "#ccc3d8"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "display-margin-bottom": "2.5rem",
+                        "grid-gap": "1rem",
+                        "container-padding": "2rem",
+                        "button-size": "4.5rem"
+                    },
+                    "fontFamily": {
+                        "button-text": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "display-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "button-text": ["20px", {"lineHeight": "1.0", "fontWeight": "500"}],
+                        "label-sm": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "display-md": ["48px", {"lineHeight": "1.2", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-panel {
+            background: rgba(23, 31, 51, 0.4);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .neon-glow-purple {
+            box-shadow: 0 0 15px rgba(124, 58, 237, 0.3);
+        }
+        .neon-glow-purple-active {
+            box-shadow: 0 0 25px rgba(124, 58, 237, 0.6);
+        }
+        input[type="range"] {
+            -webkit-appearance: none;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 9999px;
+            height: 8px;
+        }
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 20px;
+            height: 20px;
+            background: #d2bbff;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0 0 10px rgba(210, 187, 255, 0.5);
+            border: 2px solid #7c3aed;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-button-text min-h-screen overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="bg-slate-950/40 backdrop-blur-xl fixed top-0 w-full z-50 border-b border-white/10 shadow-[0_0_15px_rgba(124,58,237,0.1)] flex justify-between items-center px-6 h-16 w-full max-w-full">
+<div class="flex items-center gap-4">
+<span class="text-2xl font-black bg-gradient-to-r from-violet-400 to-fuchsia-500 bg-clip-text text-transparent font-inter tracking-tight">LuminaCalc</span>
+</div>
+<div class="flex items-center gap-6">
+<button class="text-slate-400 hover:text-violet-300 hover:bg-white/5 transition-all p-2 rounded-lg active:scale-95 duration-200">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</button>
+<button class="text-violet-400 hover:text-violet-300 hover:bg-white/5 transition-all p-2 rounded-lg active:scale-95 duration-200">
+<span class="material-symbols-outlined" data-icon="account_circle" style="font-variation-settings: 'FILL' 1;">account_circle</span>
+</button>
+</div>
+</header>
+<!-- SideNavBar (Desktop) -->
+<aside class="hidden md:flex flex-col py-8 px-4 gap-2 h-screen w-64 fixed left-0 top-0 border-r border-white/10 bg-slate-950/60 backdrop-blur-2xl shadow-2xl z-40">
+<div class="mb-10 px-4">
+<h1 class="font-black text-violet-400 text-xl tracking-tight">LuminaCalc</h1>
+<p class="text-slate-500 text-xs uppercase tracking-widest font-bold">Premium Engine</p>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-400 hover:bg-white/5 hover:translate-x-1 transition-all duration-300 active:scale-98" href="#">
+<span class="material-symbols-outlined" data-icon="calculate">calculate</span>
+<span class="font-medium text-sm">Standard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-400 hover:bg-white/5 hover:translate-x-1 transition-all duration-300 active:scale-98" href="#">
+<span class="material-symbols-outlined" data-icon="function">function</span>
+<span class="font-medium text-sm">Scientific</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-400 hover:bg-white/5 hover:translate-x-1 transition-all duration-300 active:scale-98" href="#">
+<span class="material-symbols-outlined" data-icon="straighten">straighten</span>
+<span class="font-medium text-sm">Converter</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-400 hover:bg-white/5 hover:translate-x-1 transition-all duration-300 active:scale-98" href="#">
+<span class="material-symbols-outlined" data-icon="history">history</span>
+<span class="font-medium text-sm">History</span>
+</a>
+</nav>
+<div class="pt-6 border-t border-white/5 space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl bg-violet-500/20 text-violet-400 border-r-2 border-violet-500 shadow-[0_0_20px_rgba(124,58,237,0.3)] transition-all active:scale-98" href="#">
+<span class="material-symbols-outlined" data-icon="settings" style="font-variation-settings: 'FILL' 1;">settings</span>
+<span class="font-medium text-sm">Settings</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-400 hover:bg-white/5 hover:translate-x-1 transition-all duration-300 active:scale-98" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-medium text-sm">Profile</span>
+</a>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="pt-24 pb-12 md:pl-72 px-6 min-h-screen max-w-7xl mx-auto">
+<!-- Header Section -->
+<div class="mb-10">
+<h2 class="text-display-md font-display-md text-on-surface mb-2">Settings</h2>
+<p class="text-on-surface-variant font-label-sm">Customize your LuminaCalc experience</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+<!-- Appearance Section -->
+<section class="glass-panel rounded-3xl p-8 neon-glow-purple">
+<div class="flex items-center gap-3 mb-8">
+<span class="material-symbols-outlined text-primary" data-icon="palette">palette</span>
+<h3 class="text-xl font-bold tracking-tight">Appearance</h3>
+</div>
+<div class="space-y-8">
+<!-- Theme Toggle -->
+<div>
+<label class="block text-on-surface-variant text-label-sm uppercase mb-4 tracking-widest">Visual Theme</label>
+<div class="flex p-1 bg-surface-container-high rounded-full border border-white/5">
+<button class="flex-1 py-2 px-4 rounded-full text-sm font-medium text-slate-400 hover:text-white transition-all">Light</button>
+<button class="flex-1 py-2 px-4 rounded-full text-sm font-medium bg-primary-container text-white shadow-lg neon-glow-purple-active">Dark</button>
+<button class="flex-1 py-2 px-4 rounded-full text-sm font-medium text-slate-400 hover:text-white transition-all">System</button>
+</div>
+</div>
+<!-- Glassmorphism intensity -->
+<div>
+<div class="flex justify-between items-center mb-4">
+<label class="text-on-surface text-sm font-medium">Interface Blur</label>
+<span class="text-primary text-xs font-bold px-2 py-1 rounded bg-primary/10">20px</span>
+</div>
+<input class="w-full" max="40" min="0" type="range" value="20"/>
+</div>
+</div>
+</section>
+<!-- Interaction Section -->
+<section class="glass-panel rounded-3xl p-8 neon-glow-purple">
+<div class="flex items-center gap-3 mb-8">
+<span class="material-symbols-outlined text-secondary" data-icon="touch_app">touch_app</span>
+<h3 class="text-xl font-bold tracking-tight">Interaction</h3>
+</div>
+<div class="space-y-6">
+<!-- Sound Effects -->
+<div class="flex items-center justify-between p-4 rounded-2xl bg-surface-container/50 border border-white/5">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-xl bg-blue-500/10 flex items-center justify-center text-blue-400">
+<span class="material-symbols-outlined" data-icon="volume_up">volume_up</span>
+</div>
+<div>
+<p class="text-on-surface font-medium">Sound Effects</p>
+<p class="text-xs text-on-surface-variant">Tactile click feedback</p>
+</div>
+</div>
+<button class="w-14 h-7 bg-primary-container rounded-full relative transition-all shadow-[0_0_10px_rgba(124,58,237,0.4)]">
+<div class="absolute right-1 top-1 w-5 h-5 bg-white rounded-full"></div>
+</button>
+</div>
+<!-- Haptic Feedback -->
+<div class="flex items-center justify-between p-4 rounded-2xl bg-surface-container/50 border border-white/5">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-xl bg-purple-500/10 flex items-center justify-center text-purple-400">
+<span class="material-symbols-outlined" data-icon="vibration">vibration</span>
+</div>
+<div>
+<p class="text-on-surface font-medium">Haptic Feedback</p>
+<p class="text-xs text-on-surface-variant">Precision vibration response</p>
+</div>
+</div>
+<button class="w-14 h-7 bg-primary-container rounded-full relative transition-all shadow-[0_0_10px_rgba(124,58,237,0.4)]">
+<div class="absolute right-1 top-1 w-5 h-5 bg-white rounded-full"></div>
+</button>
+</div>
+</div>
+</section>
+<!-- Calculation Engine Section -->
+<section class="glass-panel rounded-3xl p-8 neon-glow-purple lg:col-span-2">
+<div class="flex items-center gap-3 mb-8">
+<span class="material-symbols-outlined text-tertiary" data-icon="memory">memory</span>
+<h3 class="text-xl font-bold tracking-tight">Calculation Engine</h3>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+<div>
+<div class="flex justify-between items-center mb-4">
+<label class="text-on-surface text-sm font-medium">Decimal Precision</label>
+<span class="text-tertiary text-xs font-bold px-2 py-1 rounded bg-tertiary/10">8 Digits</span>
+</div>
+<input class="w-full" max="15" min="0" type="range" value="8"/>
+<div class="flex justify-between mt-2 px-1">
+<span class="text-[10px] text-on-surface-variant">Fast</span>
+<span class="text-[10px] text-on-surface-variant">Scientific</span>
+</div>
+</div>
+<div class="space-y-4">
+<label class="block text-on-surface-variant text-label-sm uppercase tracking-widest">Calculation Mode</label>
+<div class="grid grid-cols-2 gap-4">
+<div class="p-4 rounded-2xl bg-surface-container-high border-2 border-primary-container/50 flex flex-col gap-2 relative overflow-hidden">
+<span class="material-symbols-outlined text-primary text-xl" data-icon="rocket_launch">rocket_launch</span>
+<p class="font-bold text-sm">Turbo Flow</p>
+<p class="text-[10px] text-on-surface-variant">Immediate processing</p>
+<div class="absolute top-2 right-2">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+</div>
+<div class="p-4 rounded-2xl bg-surface-container/50 border border-white/5 flex flex-col gap-2 opacity-60">
+<span class="material-symbols-outlined text-slate-400 text-xl" data-icon="bolt">bolt</span>
+<p class="font-bold text-sm">Eco Stream</p>
+<p class="text-[10px] text-on-surface-variant">Power saving mode</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Decorative Visual Support -->
+<div class="lg:col-span-2 rounded-3xl overflow-hidden h-48 relative border border-white/10">
+<img alt="Settings visual theme" class="w-full h-full object-cover opacity-40 mix-blend-luminosity" data-alt="Abstract 3D glass structures with neon violet light refractions and deep shadows in a futuristic digital environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBLp5e98dg3xJRIAt-f00AI2RVvaKHaaUZ-RmyIUjBqWC6pcx2tixaZX-9fQ0Stsbu3RGJteXnUEIzfRmQl2inAfpF4mBd0h_U3L80IXMJFVszX0KRXBzFffmkWZyw2Cc43nu5suPoicimDpWC2YbYO5NBKfzjS6OBHJIazilMZ4l00XhqLLzzGXSLl9PgpEC62QN91UoG0AeYmdS1PweCL9IXYLQ2TKL-FpISohX8b6utBTkwRowwKw_Ilk-eZqRFj_ekCT66ua43"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+<div class="absolute bottom-6 left-8">
+<p class="text-primary font-black text-xl italic tracking-tighter">ENGINE V.2.4.0</p>
+<p class="text-on-surface-variant text-xs font-medium uppercase tracking-[0.3em]">Hardware Accelerated Interface</p>
+</div>
+</div>
+</div>
+<!-- Footer Actions -->
+<div class="mt-12 flex flex-col sm:flex-row gap-4 items-center justify-between border-t border-white/10 pt-8">
+<div class="text-on-surface-variant text-xs flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="verified_user">verified_user</span>
+                All settings are synced across your Lumina Cloud devices
+            </div>
+<div class="flex gap-4">
+<button class="px-8 py-3 rounded-xl border border-white/10 text-on-surface-variant font-medium text-sm hover:bg-white/5 transition-all">
+                    Reset Defaults
+                </button>
+<button class="px-8 py-3 rounded-xl bg-primary-container text-white font-bold text-sm shadow-lg hover:shadow-primary-container/20 transition-all active:scale-95">
+                    Save Changes
+                </button>
+</div>
+</div>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 right-0 h-16 bg-slate-950/80 backdrop-blur-xl border-t border-white/10 flex items-center justify-around px-2 z-50">
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined" data-icon="calculate">calculate</span>
+<span class="text-[10px] font-medium">Standard</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined" data-icon="function">function</span>
+<span class="text-[10px] font-medium">Science</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-violet-400">
+<span class="material-symbols-outlined" data-icon="settings" style="font-variation-settings: 'FILL' 1;">settings</span>
+<span class="text-[10px] font-medium">Settings</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="text-[10px] font-medium">Account</span>
+</button>
+</nav>
+</body></html>

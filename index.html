@@ -1,56 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Calculator</title>
-
-  <!-- Font Awesome for icons -->
-  <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-  <!-- Link to external CSS file (same folder) -->
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <!-- Page wrapper -->
-  <div class="wrapper">
-    <!-- Calculator -->
-    <div class="calc" id="calculator">
-      <div class="screen">
-        <div id="expr" class="expr"></div>
-        <div id="result" class="result">0</div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="refresh" content="0; url=standard-calculator.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LuminaCalc</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/luminacalc-styles.css" />
+  </head>
+  <body data-page="redirect">
+    <main class="redirect-shell">
+      <div class="redirect-card">
+        <p class="eyebrow">Launching Workspace</p>
+        <h1>LuminaCalc</h1>
+        <p>Redirecting to the standard calculator dashboard.</p>
+        <a class="button primary" href="standard-calculator.html">Open Standard Calculator</a>
       </div>
-
-      <div class="keys">
-        <button class="key" data-action="clear">C</button>
-        <button class="key" data-action="back">DE</button>
-        <button class="key" data-value="%">%</button>
-        <button class="key operator" data-value="/">÷</button>
-
-        <button class="key" data-value="7">7</button>
-        <button class="key" data-value="8">8</button>
-        <button class="key" data-value="9">9</button>
-        <button class="key operator" data-value="*">×</button>
-
-        <button class="key" data-value="4">4</button>
-        <button class="key" data-value="5">5</button>
-        <button class="key" data-value="6">6</button>
-        <button class="key operator" data-value="-">-</button>
-
-        <button class="key" data-value="1">1</button>
-        <button class="key" data-value="2">2</button>
-        <button class="key" data-value="3">3</button>
-        <button class="key operator" data-value="+">+</button>
-
-        <button class="key wide" data-value="0">0</button>
-        <button class="key" data-value=".">.</button>
-        <button class="key equal" data-action="equals">=</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- Link to external JS file (same folder) -->
-  <script src="script.js"></script>
-</body>
+    </main>
+  </body>
 </html>

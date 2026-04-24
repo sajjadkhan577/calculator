@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LuminaCalc Unit Converter</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/luminacalc-styles.css" />
+  </head>
+  <body data-page="converter">
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand-block">
+          <p class="eyebrow">Conversion Workspace</p>
+          <h1>LuminaCalc</h1>
+          <p class="sidebar-copy">Convert length, weight, temperature, and currency with fast switching and saved results.</p>
+        </div>
+        <nav class="sidebar-nav">
+          <a class="nav-link" href="standard-calculator.html">Standard Calculator</a>
+          <a class="nav-link" href="scientific-calculator.html">Scientific Calculator</a>
+          <a class="nav-link active" href="unit-converter.html">Unit Converter</a>
+          <a class="nav-link" href="calculation-history.html">Calculation History</a>
+          <a class="nav-link" href="application-settings.html">Application Settings</a>
+          <a class="nav-link" href="user-profile.html">User Profile</a>
+        </nav>
+        <section class="sidebar-card">
+          <p class="eyebrow">Categories</p>
+          <div class="category-chip-list" data-converter-categories></div>
+        </section>
+      </aside>
+
+      <main class="main-panel">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">Real-Time Conversion</p>
+            <h2>Unit Converter</h2>
+          </div>
+          <span class="badge" data-converter-badge>Length</span>
+        </header>
+
+        <section class="converter-layout">
+          <article class="converter-panel">
+            <div class="field-group">
+              <label for="converterAmount">Input Amount</label>
+              <input id="converterAmount" class="text-input" type="number" step="any" value="1" />
+            </div>
+
+            <div class="converter-grid">
+              <div class="field-group">
+                <label for="converterFrom">From Unit</label>
+                <select id="converterFrom" class="text-input" data-converter-from></select>
+              </div>
+              <button class="swap-button" type="button" data-converter-swap aria-label="Swap units">⇄</button>
+              <div class="field-group">
+                <label for="converterTo">To Unit</label>
+                <select id="converterTo" class="text-input" data-converter-to></select>
+              </div>
+            </div>
+
+            <article class="result-card">
+              <p class="eyebrow">Converted Result</p>
+              <h3 data-converter-result>1.0000</h3>
+              <p class="muted-copy" data-converter-detail>Select units to see the precise conversion output.</p>
+            </article>
+          </article>
+
+          <aside class="insight-column">
+            <article class="info-card">
+              <p class="eyebrow">Reference</p>
+              <p class="muted-copy">Currency uses built-in offline snapshot rates for a fully framework-free demo.</p>
+            </article>
+
+            <article class="info-card">
+              <div class="section-heading">
+                <div>
+                  <p class="eyebrow">Recent Conversions</p>
+                  <h3>Conversion History</h3>
+                </div>
+                <a class="text-link" href="calculation-history.html">View all</a>
+              </div>
+              <div class="activity-preview" data-converter-preview></div>
+            </article>
+          </aside>
+        </section>
+      </main>
+    </div>
+
+    <nav class="mobile-nav">
+      <a class="nav-link" href="standard-calculator.html">Standard</a>
+      <a class="nav-link" href="scientific-calculator.html">Scientific</a>
+      <a class="nav-link active" href="unit-converter.html">Converter</a>
+      <a class="nav-link" href="calculation-history.html">History</a>
+    </nav>
+
+    <script src="assets/js/luminacalc-app.js"></script>
+  </body>
+</html>

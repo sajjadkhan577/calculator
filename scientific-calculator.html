@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LuminaCalc Scientific Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/luminacalc-styles.css" />
+  </head>
+  <body data-page="scientific">
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand-block">
+          <p class="eyebrow">Advanced Workspace</p>
+          <h1>LuminaCalc</h1>
+          <p class="sidebar-copy">Scientific evaluation with angle modes, constants, powers, and stored history.</p>
+        </div>
+        <nav class="sidebar-nav">
+          <a class="nav-link" href="standard-calculator.html">Standard Calculator</a>
+          <a class="nav-link active" href="scientific-calculator.html">Scientific Calculator</a>
+          <a class="nav-link" href="unit-converter.html">Unit Converter</a>
+          <a class="nav-link" href="calculation-history.html">Calculation History</a>
+          <a class="nav-link" href="application-settings.html">Application Settings</a>
+          <a class="nav-link" href="user-profile.html">User Profile</a>
+        </nav>
+        <section class="sidebar-card">
+          <p class="eyebrow">Supported Functions</p>
+          <ul class="mini-list compact">
+            <li><span>Trig</span><strong>sin cos tan</strong></li>
+            <li><span>Logs</span><strong>log ln</strong></li>
+            <li><span>Powers</span><strong>x² xʸ √x</strong></li>
+          </ul>
+        </section>
+      </aside>
+
+      <main class="main-panel">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">Scientific Workspace</p>
+            <h2>Scientific Calculator</h2>
+          </div>
+          <div class="toggle-group" data-angle-toggle>
+            <button class="toggle-button active" type="button" data-angle-mode="deg">DEG</button>
+            <button class="toggle-button" type="button" data-angle-mode="rad">RAD</button>
+          </div>
+        </header>
+
+        <section class="scientific-layout">
+          <article class="calculator-panel scientific-panel">
+            <div class="display-panel">
+              <div class="display-meta">
+                <span class="eyebrow">Expression Builder</span>
+                <button class="icon-button" type="button" data-scientific-action="backspace" aria-label="Backspace">
+                  &#9003;
+                </button>
+              </div>
+              <output class="expression-text" data-scientific-expression>0</output>
+              <output class="result-text" data-scientific-result>0</output>
+            </div>
+
+            <div class="scientific-grid">
+              <button class="key key-action" type="button" data-scientific-insert="sin(">sin</button>
+              <button class="key key-action" type="button" data-scientific-insert="cos(">cos</button>
+              <button class="key key-action" type="button" data-scientific-insert="tan(">tan</button>
+              <button class="key key-action" type="button" data-scientific-insert="log(">log</button>
+              <button class="key key-action" type="button" data-scientific-insert="ln(">ln</button>
+              <button class="key key-action" type="button" data-scientific-insert="sqrt(">√</button>
+
+              <button class="key key-action" type="button" data-scientific-insert="^2">x²</button>
+              <button class="key key-action" type="button" data-scientific-insert="^">xʸ</button>
+              <button class="key key-action" type="button" data-scientific-insert="pi">π</button>
+              <button class="key key-action" type="button" data-scientific-insert="e">e</button>
+              <button class="key key-action" type="button" data-scientific-insert="(">(</button>
+              <button class="key key-action" type="button" data-scientific-insert=")">)</button>
+
+              <button class="key key-danger" type="button" data-scientific-action="clear">AC</button>
+              <button class="key key-action" type="button" data-scientific-action="percent">%</button>
+              <button class="key key-operator" type="button" data-scientific-insert="/">÷</button>
+              <button class="key key-operator" type="button" data-scientific-insert="*">×</button>
+              <button class="key" type="button" data-scientific-insert="7">7</button>
+              <button class="key" type="button" data-scientific-insert="8">8</button>
+
+              <button class="key" type="button" data-scientific-insert="9">9</button>
+              <button class="key key-operator" type="button" data-scientific-insert="-">−</button>
+              <button class="key" type="button" data-scientific-insert="4">4</button>
+              <button class="key" type="button" data-scientific-insert="5">5</button>
+              <button class="key" type="button" data-scientific-insert="6">6</button>
+              <button class="key key-operator" type="button" data-scientific-insert="+">+</button>
+
+              <button class="key" type="button" data-scientific-insert="1">1</button>
+              <button class="key" type="button" data-scientific-insert="2">2</button>
+              <button class="key" type="button" data-scientific-insert="3">3</button>
+              <button class="key key-action" type="button" data-scientific-insert=".">.</button>
+              <button class="key key-wide" type="button" data-scientific-insert="0">0</button>
+              <button class="key key-primary" type="button" data-scientific-action="equals">=</button>
+            </div>
+          </article>
+
+          <aside class="insight-column">
+            <article class="info-card">
+              <p class="eyebrow">Default Angle Mode</p>
+              <h3 data-angle-summary>DEG</h3>
+              <p class="muted-copy">This page respects the saved preference from application settings.</p>
+            </article>
+
+            <article class="info-card">
+              <div class="section-heading">
+                <div>
+                  <p class="eyebrow">Recent Scientific Results</p>
+                  <h3>Reusable Entries</h3>
+                </div>
+                <a class="text-link" href="calculation-history.html">Open history</a>
+              </div>
+              <div class="activity-preview" data-scientific-preview></div>
+            </article>
+          </aside>
+        </section>
+      </main>
+    </div>
+
+    <nav class="mobile-nav">
+      <a class="nav-link" href="standard-calculator.html">Standard</a>
+      <a class="nav-link active" href="scientific-calculator.html">Scientific</a>
+      <a class="nav-link" href="unit-converter.html">Converter</a>
+      <a class="nav-link" href="calculation-history.html">History</a>
+    </nav>
+
+    <script src="assets/js/luminacalc-app.js"></script>
+  </body>
+</html>

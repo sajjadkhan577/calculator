@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LuminaCalc Application Settings</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/luminacalc-styles.css" />
+  </head>
+  <body data-page="settings">
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand-block">
+          <p class="eyebrow">System Control</p>
+          <h1>LuminaCalc</h1>
+          <p class="sidebar-copy">Customize theme, blur, precision, animation, sound, and scientific defaults across the suite.</p>
+        </div>
+        <nav class="sidebar-nav">
+          <a class="nav-link" href="standard-calculator.html">Standard Calculator</a>
+          <a class="nav-link" href="scientific-calculator.html">Scientific Calculator</a>
+          <a class="nav-link" href="unit-converter.html">Unit Converter</a>
+          <a class="nav-link" href="calculation-history.html">Calculation History</a>
+          <a class="nav-link active" href="application-settings.html">Application Settings</a>
+          <a class="nav-link" href="user-profile.html">User Profile</a>
+        </nav>
+      </aside>
+
+      <main class="main-panel">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">Shared Preferences</p>
+            <h2>Application Settings</h2>
+          </div>
+          <a class="button ghost" href="standard-calculator.html">Back to App</a>
+        </header>
+
+        <section class="settings-grid">
+          <article class="settings-card">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">Appearance</p>
+                <h3>Theme and Atmosphere</h3>
+              </div>
+            </div>
+            <div class="control-block">
+              <label>Theme Mode</label>
+              <div class="toggle-group" data-theme-picker>
+                <button class="toggle-button" type="button" data-theme-value="dark">Dark</button>
+                <button class="toggle-button" type="button" data-theme-value="light">Light</button>
+                <button class="toggle-button" type="button" data-theme-value="system">System</button>
+              </div>
+            </div>
+            <div class="control-block">
+              <label for="blurStrength">Glass Blur</label>
+              <input id="blurStrength" class="slider" type="range" min="8" max="30" step="1" data-setting="blurStrength" />
+              <p class="muted-copy" data-blur-readout></p>
+            </div>
+          </article>
+
+          <article class="settings-card">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">Interaction</p>
+                <h3>Motion and Feedback</h3>
+              </div>
+            </div>
+            <div class="control-row">
+              <span>Button click sound</span>
+              <button class="switch" type="button" data-setting-toggle="soundEnabled"></button>
+            </div>
+            <div class="control-row">
+              <span>Animations</span>
+              <button class="switch" type="button" data-setting-toggle="animationsEnabled"></button>
+            </div>
+          </article>
+
+          <article class="settings-card">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">Precision</p>
+                <h3>Numeric Output</h3>
+              </div>
+            </div>
+            <div class="control-block">
+              <label for="precisionDigits">Max Fraction Digits</label>
+              <input id="precisionDigits" class="slider" type="range" min="2" max="10" step="1" data-setting="precisionDigits" />
+              <p class="muted-copy" data-precision-readout></p>
+            </div>
+            <div class="control-block">
+              <label>Default Angle Mode</label>
+              <div class="toggle-group" data-angle-picker>
+                <button class="toggle-button" type="button" data-angle-default="deg">DEG</button>
+                <button class="toggle-button" type="button" data-angle-default="rad">RAD</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="settings-card">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">Persistence</p>
+                <h3>Stored Data</h3>
+              </div>
+            </div>
+            <p class="muted-copy">Changes are saved locally and applied across every page instantly.</p>
+            <div class="button-row">
+              <button class="button ghost" type="button" data-export-data>Export Data</button>
+              <button class="button danger" type="button" data-reset-app>Reset App Data</button>
+            </div>
+          </article>
+        </section>
+      </main>
+    </div>
+
+    <nav class="mobile-nav">
+      <a class="nav-link" href="standard-calculator.html">Standard</a>
+      <a class="nav-link" href="scientific-calculator.html">Scientific</a>
+      <a class="nav-link" href="unit-converter.html">Converter</a>
+      <a class="nav-link" href="application-settings.html">Settings</a>
+    </nav>
+
+    <script src="assets/js/luminacalc-app.js"></script>
+  </body>
+</html>
