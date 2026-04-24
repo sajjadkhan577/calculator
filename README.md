@@ -1,6 +1,6 @@
-# LuminaCalc
+# Simple Calculator
 
-LuminaCalc is a premium multi-page calculator web app built with plain HTML, CSS, and JavaScript. It combines a polished glassmorphic interface with fully functional tools for standard calculation, scientific evaluation, unit conversion, persistent history, profile management, and shared application settings.
+Simple Calculator is a premium multi-page calculator web app built with plain HTML, CSS, and JavaScript. It combines a polished glassmorphic interface with fully functional tools for standard calculation, scientific evaluation, unit conversion, persistent history, profile management, and shared application settings.
 
 ## Features
 
@@ -27,11 +27,11 @@ LuminaCalc is a premium multi-page calculator web app built with plain HTML, CSS
 ├── README.md
 ├── assets
 │   ├── css
-│   │   └── luminacalc-styles.css
+│   │   └── simple-calculator-styles.css
 │   ├── imgs
 │   │   └── previews
 │   └── js
-│       └── luminacalc-app.js
+│       └── simple-calculator-app.js
 └── docs
     └── reference-designs
 ```

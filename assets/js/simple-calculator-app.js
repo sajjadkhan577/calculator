@@ -1,7 +1,7 @@
 const STORAGE_KEYS = {
-  settings: "luminacalc.settings",
-  history: "luminacalc.history",
-  profile: "luminacalc.profile",
+  settings: "simple-calculator.settings",
+  history: "simple-calculator.history",
+  profile: "simple-calculator.profile",
 };
 
 const DEFAULT_SETTINGS = {
@@ -210,7 +210,7 @@ function downloadData() {
   const url = URL.createObjectURL(blob);
   const link = document.createElement("a");
   link.href = url;
-  link.download = "luminacalc-data-export.json";
+  link.download = "simple-calculator-data-export.json";
   link.click();
   URL.revokeObjectURL(url);
 }
@@ -265,7 +265,7 @@ function buildPageLabel(page) {
     standard: "Standard Calculator",
     scientific: "Scientific Calculator",
     converter: "Unit Converter",
-  }[page] || "LuminaCalc";
+  }[page] || "Simple Calculator";
 }
 
 function initStandardCalculator() {
@@ -513,9 +513,9 @@ function initScientificCalculator() {
   }
 
   const settings = getSettings();
-  let expression = window.sessionStorage.getItem("luminacalc.recallExpression") || "";
+  let expression = window.sessionStorage.getItem("simple-calculator.recallExpression") || "";
   let angleMode = settings.angleMode;
-  window.sessionStorage.removeItem("luminacalc.recallExpression");
+  window.sessionStorage.removeItem("simple-calculator.recallExpression");
 
   const angleSummary = document.querySelector("[data-angle-summary]");
 
@@ -801,7 +801,7 @@ function initHistoryPage() {
         return;
       }
       if (entry.page === "scientific" && entry.expression) {
-        window.sessionStorage.setItem("luminacalc.recallExpression", entry.expression);
+        window.sessionStorage.setItem("simple-calculator.recallExpression", entry.expression);
         window.location.href = "scientific-calculator.html";
       } else {
         window.location.href = entry.type === "conversion" ? "unit-converter.html" : "standard-calculator.html";
