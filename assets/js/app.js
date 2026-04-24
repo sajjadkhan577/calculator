@@ -498,7 +498,7 @@ function initStandardCalculator() {
   const openHistory = document.querySelector("[data-open-history]");
   if (openHistory) {
     openHistory.addEventListener("click", () => {
-      window.location.href = "calculation-history.html";
+      window.location.href = "history.html";
     });
   }
 
@@ -802,9 +802,9 @@ function initHistoryPage() {
       }
       if (entry.page === "scientific" && entry.expression) {
         window.sessionStorage.setItem("simple-calculator.recallExpression", entry.expression);
-        window.location.href = "scientific-calculator.html";
+        window.location.href = "scientific.html";
       } else {
-        window.location.href = entry.type === "conversion" ? "unit-converter.html" : "standard-calculator.html";
+        window.location.href = entry.type === "conversion" ? "converter.html" : "index.html";
       }
     }
   });

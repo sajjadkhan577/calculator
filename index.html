@@ -2,25 +2,131 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="refresh" content="0; url=standard-calculator.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Simple Calculator</title>
+    <title>Simple Calculator Standard Calculator</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="assets/css/simple-calculator-styles.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
   </head>
-  <body data-page="redirect">
-    <main class="redirect-shell">
-      <div class="redirect-card">
-        <p class="eyebrow">Launching Workspace</p>
-        <h1>Simple Calculator</h1>
-        <p>Redirecting to the standard calculator dashboard.</p>
-        <a class="button primary" href="standard-calculator.html">Open Standard Calculator</a>
-      </div>
-    </main>
+  <body data-page="standard">
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand-block">
+          <p class="eyebrow">Premium Engine</p>
+          <h1>Simple Calculator</h1>
+          <p class="sidebar-copy">Precision arithmetic with responsive glassmorphism and shared workspace data.</p>
+        </div>
+        <nav class="sidebar-nav">
+          <a class="nav-link active" href="index.html">Standard Calculator</a>
+          <a class="nav-link" href="scientific.html">Scientific Calculator</a>
+          <a class="nav-link" href="converter.html">Unit Converter</a>
+          <a class="nav-link" href="history.html">Calculation History</a>
+          <a class="nav-link" href="settings.html">Application Settings</a>
+          <a class="nav-link" href="profile.html">User Profile</a>
+        </nav>
+        <section class="sidebar-card">
+          <p class="eyebrow">Keyboard Shortcuts</p>
+          <ul class="mini-list">
+            <li><span>Enter</span><strong>Equals</strong></li>
+            <li><span>Esc</span><strong>Clear</strong></li>
+            <li><span>Backspace</span><strong>Delete Digit</strong></li>
+          </ul>
+        </section>
+      </aside>
+
+      <main class="main-panel">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">Standard Workspace</p>
+            <h2>Standard Calculator</h2>
+          </div>
+          <div class="topbar-actions">
+            <button class="button ghost" type="button" data-open-history>Open History</button>
+            <a class="button ghost" href="settings.html">Settings</a>
+          </div>
+        </header>
+
+        <section class="hero-grid">
+          <article class="calculator-panel">
+            <div class="display-panel">
+              <div class="display-meta">
+                <span class="eyebrow">Live Expression</span>
+                <button class="icon-button" type="button" data-standard-action="backspace" aria-label="Backspace">
+                  &#9003;
+                </button>
+              </div>
+              <output class="expression-text" data-standard-expression>0</output>
+              <output class="result-text" data-standard-result>0</output>
+            </div>
+
+            <div class="keypad-grid">
+              <button class="key key-danger" type="button" data-standard-action="clear">AC</button>
+              <button class="key key-action" type="button" data-standard-action="sign">+/-</button>
+              <button class="key key-action" type="button" data-standard-action="percent">%</button>
+              <button class="key key-operator" type="button" data-standard-operator="/">÷</button>
+
+              <button class="key" type="button" data-standard-number="7">7</button>
+              <button class="key" type="button" data-standard-number="8">8</button>
+              <button class="key" type="button" data-standard-number="9">9</button>
+              <button class="key key-operator" type="button" data-standard-operator="*">×</button>
+
+              <button class="key" type="button" data-standard-number="4">4</button>
+              <button class="key" type="button" data-standard-number="5">5</button>
+              <button class="key" type="button" data-standard-number="6">6</button>
+              <button class="key key-operator" type="button" data-standard-operator="-">−</button>
+
+              <button class="key" type="button" data-standard-number="1">1</button>
+              <button class="key" type="button" data-standard-number="2">2</button>
+              <button class="key" type="button" data-standard-number="3">3</button>
+              <button class="key key-operator" type="button" data-standard-operator="+">+</button>
+
+              <button class="key key-wide" type="button" data-standard-number="0">0</button>
+              <button class="key" type="button" data-standard-action="decimal">.</button>
+              <button class="key key-primary" type="button" data-standard-action="equals">=</button>
+            </div>
+          </article>
+
+          <section class="insight-column">
+            <article class="info-card">
+              <p class="eyebrow">Session Snapshot</p>
+              <div class="stat-stack">
+                <div>
+                  <span class="stat-number" data-total-activities>0</span>
+                  <span class="stat-label">Saved activities</span>
+                </div>
+                <div>
+                  <span class="stat-number" data-standard-total>0</span>
+                  <span class="stat-label">Standard calculations</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="info-card">
+              <div class="section-heading">
+                <div>
+                  <p class="eyebrow">Recent Activity</p>
+                  <h3>Latest Results</h3>
+                </div>
+                <a class="text-link" href="history.html">View all</a>
+              </div>
+              <div class="activity-preview" data-activity-preview></div>
+            </article>
+          </section>
+        </section>
+      </main>
+    </div>
+
+    <nav class="mobile-nav">
+      <a class="nav-link active" href="index.html">Standard</a>
+      <a class="nav-link" href="scientific.html">Scientific</a>
+      <a class="nav-link" href="converter.html">Converter</a>
+      <a class="nav-link" href="history.html">History</a>
+    </nav>
+
+    <script src="assets/js/app.js"></script>
   </body>
 </html>

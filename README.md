@@ -1,76 +1,105 @@
-# Simple Calculator
+# Simple Calculator - Premium Utility Engine
 
-Simple Calculator is a premium multi-page calculator web app built with plain HTML, CSS, and JavaScript. It combines a polished glassmorphic interface with fully functional tools for standard calculation, scientific evaluation, unit conversion, persistent history, profile management, and shared application settings.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Version](https://img.shields.io/badge/version-1.1.0-blue.svg)](https://github.com/sajjadkhan577/calculator)
+[![Status](https://img.shields.io/badge/status-production--ready-success.svg)](https://github.com/sajjadkhan577/calculator)
 
-## Features
+**Simple Calculator** is a premium, multi-page web application designed for high-precision arithmetic and utility conversions. Built with a focus on modern aesthetics, it features a glassmorphic UI, responsive layouts, and persistent local storage.
 
-- Standard calculator with keyboard support, chained operations, percentage, sign toggle, and saved results
-- Scientific calculator with trigonometric functions, logarithms, constants, powers, square root, and DEG/RAD modes
-- Unit converter for length, weight, temperature, and currency
-- Shared history page with filtering, copy, and reuse actions
-- Settings page with theme, blur, precision, motion, sound, and default angle preferences
-- User profile page with local persistence
-- Fully framework-free implementation using only HTML, CSS, and JavaScript
-- Responsive layout for desktop and mobile
+![App Preview](assets/img/previews/index-preview.png)
 
-## Project Structure
+---
 
-```text
-.
-├── index.html
-├── standard-calculator.html
-├── scientific-calculator.html
-├── unit-converter.html
-├── calculation-history.html
-├── application-settings.html
-├── user-profile.html
-├── README.md
-├── assets
-│   ├── css
-│   │   └── simple-calculator-styles.css
-│   ├── imgs
-│   │   └── previews
-│   └── js
-│       └── simple-calculator-app.js
-└── docs
-    └── reference-designs
-```
+## ✨ Features
 
-## Pages
+### 🖥️ Standard Calculator
+- **Full Precision**: Robust arithmetic engine with keyboard support.
+- **Micro-animations**: Interactive button feedback and result pulsing.
+- **History Integration**: Automatically saves results for later use.
 
-- `standard-calculator.html`: standard arithmetic workspace
-- `scientific-calculator.html`: advanced scientific functions
-- `unit-converter.html`: multi-category converter
-- `calculation-history.html`: saved activity timeline
-- `application-settings.html`: shared preferences and export/reset tools
-- `user-profile.html`: editable local profile
+### 🧪 Scientific Calculator
+- **Advanced Math**: Trigonometric functions (sin, cos, tan), square roots, powers ($x^y$), and logarithms.
+- **Flexible Modes**: Support for both Degree (DEG) and Radian (RAD) modes.
+- **Memory Recall**: Reuse previous scientific expressions with one click.
 
-## Getting Started
+### 🔄 Unit Converter
+- **Multi-category**: Length, Weight, Temperature, and Currency.
+- **Live Sync**: Instant conversion results as you type.
+- **Smart Swapping**: Effortlessly reverse conversion directions.
 
-1. Clone the repository.
-2. Open `index.html` in a browser.
-3. Or launch the project with any local static server.
+### 📂 Shared Workspace
+- **Persistent History**: Unified timeline for all calculations and conversions.
+- **Application Settings**: Customize the interface with dark/light themes, blur intensity, and decimal precision.
+- **User Profiles**: Manage local identity and preferences within the app.
 
-Example:
+---
 
+## 🛠️ Technology Stack
+
+- **Frontend**: Semantic HTML5, CSS3 (Vanilla), JavaScript (ES6+)
+- **Storage**: Local Storage & Session Storage for offline persistence
+- **Design System**: Responsive Glassmorphism with custom CSS variables
+- **Typography**: Inter (via Google Fonts)
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+No installation required! Just a modern web browser.
+
+### Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/sajjadkhan577/calculator.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd calculator
+   ```
+3. Open `index.html` in your favorite browser.
+
+### Local Development
+To serve the project with live-reloading or for a better local experience, you can use a simple static server:
+
+**Using Python:**
 ```bash
 python -m http.server 8000
 ```
 
-Then visit `http://localhost:8000`.
+**Using Node.js (npx):**
+```bash
+npx serve .
+```
 
-## Design Assets
+---
 
-- UI preview images are stored in `assets/imgs/previews`
-- original reference mockups are stored in `docs/reference-designs`
+## 📁 Repository Structure
 
-## Tech Stack
+```text
+.
+├── assets/
+│   ├── css/          # Modularized stylesheets
+│   ├── img/          # UI assets and previews
+│   └── js/           # Core application logic
+├── docs/             # Reference designs and documentation
+├── index.html        # Main Standard Calculator entry point
+├── scientific.html   # Scientific Workspace
+├── converter.html    # Unit Conversion Engine
+├── history.html      # Persistent Activity History
+├── settings.html     # Application Preferences
+└── profile.html      # Local User Profile
+```
 
-- HTML5
-- CSS3
-- Vanilla JavaScript
-- Local Storage for persistence
+---
 
-## Author
+## 📜 License
+Published under the MIT License. See `LICENSE` for more information (if applicable).
 
-Sajjad Khan
+## 👤 Author
+**Sajjad Khan**
+- GitHub: [@sajjadkhan577](https://github.com/sajjadkhan577)
+
+---
+
+*Designed with ❤️ for clarity and precision.*
