@@ -735,14 +735,27 @@ button {
   .topbar,
   .section-heading,
   .button-row,
-  .converter-grid,
-  .display-meta {
+  .converter-grid {
     flex-direction: column;
     align-items: stretch;
   }
 
   .scientific-grid {
     grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .display-meta {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .display-meta .icon-button {
+    padding: 0.6rem 0.8rem;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .summary-grid,

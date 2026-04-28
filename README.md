@@ -6,6 +6,8 @@
 
 **Simple Calculator** is a premium, multi-page web application designed for high-precision arithmetic and utility conversions. Built with a focus on modern aesthetics, it features a glassmorphic UI, responsive layouts, and persistent local storage.
 
+[**🚀 Live Demo**](https://sajjadkhan577.github.io/calculator/index.html)
+
 ![App Preview](assets/img/previews/index-preview.png)
 
 ---
